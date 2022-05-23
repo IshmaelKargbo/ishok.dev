@@ -61,9 +61,9 @@ const Noteworthy = () => {
 const Projects: NextPage = () => {
     return (
         <Layout>
-            <div className="md:my-20 mb-10">
+            <div className="md:my-20 my-10">
                 <Title title='Some Things I’ve Built' count='02' />
-                <div className="mt-16 md:mb-48">
+                <div className="md:mt-16 mt-10 md:mb-48">
                     {
                         [1, 2, 3].map((project, key) => (
                             <Project index={key} key={key} />

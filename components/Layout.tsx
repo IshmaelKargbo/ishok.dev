@@ -8,9 +8,9 @@ export const Layout = ({ children }) => {
             <header className="py-6">
                 <Nav />
             </header>
-            <main className="flex-1 flex md:items-center md:px-14">
+            <main className="flex-1 flex items-center md:px-14">
                 <Connect />
-                <div className="flex-1 mx-auto container md:px-28 px-6 pt-16 md:pt-0">
+                <div className="flex-1 mx-auto container md:px-28 px-6">
                     {children}
                 </div>
                 <Email />
