@@ -3,7 +3,7 @@ Ishok.dev
 
 
 #### Desktop Screenshot
-<!-- <img src="./app_screenshot.png" alt="Ishok.dev" /> -->
+<img src="./app_screenshot.png" alt="Ishok.dev" />
 
 ## Built With
 
