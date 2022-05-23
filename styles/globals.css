@@ -53,14 +53,6 @@ body {
     color: #ffc62b;
 }
 
-.title-text {
-    font-size: 88px;
-}
-
-.sub-text {
-    font-size: 70px;
-}
-
 .text-v {
     writing-mode: vertical-rl;
 }
@@ -137,4 +129,14 @@ body {
 
 .archive td.links {
     min-width: 100px;
+}
+
+@media (min-width: 768px) {
+    .md\:title-text {
+        font-size: 88px;
+    }
+
+    .md\:sub-text {
+        font-size: 70px;
+    }
 }

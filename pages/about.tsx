@@ -20,8 +20,8 @@ const About: NextPage = () => {
 
     return (
         <Layout>
-            <div className="flex">
-                <div className="w-3/5">
+            <div className="flex flex-wrap">
+                <div className="md:w-3/5 w-full">
                     <Title title='About Me' count='01' />
                     <p className="mb-5">Hello! My name is Ishmael and I enjoy creating things that live on the internet. My interest in development started back in 2016 when I was curious about games and decided to enroll for a software development course.</p>
                     <p className="mb-5">Fast-forward to today, and I’ve had the privilege of working at a tech start-up, a huge corporation. My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients.</p>
@@ -36,7 +36,7 @@ const About: NextPage = () => {
                         }
                     </div>
                 </div>
-                <div className="w-2/5 p-10 pt-20 pl-20">
+                <div className="md:w-2/5 w-full p-10 pt-20 md:pl-20 pl-10">
                     <div className="relative">
                         <div className="w-full h-full -z-10 absolute border-2 border-alt rounded-md top-4 left-4">
                         </div>
