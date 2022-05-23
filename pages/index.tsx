@@ -1,8 +1,6 @@
 import type { NextPage } from 'next'
 import { HomeAbout, HomeCourts, HomeRegister, HomeTestimonials } from '../components/home'
 import { Layout } from '../components/Layout'
-import { MainLayout } from '../components/layouts'
-import { HomeSlider } from '../components/sliders'
 
 const Home: NextPage = () => {
   return (
