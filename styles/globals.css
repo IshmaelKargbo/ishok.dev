@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 :root {
-    --navy-shadow: rgba(2,12,27,0.7);
+    --navy-shadow: rgba(2, 12, 27, 0.7);
     --fz-xl: 20px;
     --lightest-slate: #ccd6f6;
-    --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
     --fz-md: 16px;
     --fz-xxs: 12px;
     --fz-lg: 18px;
@@ -85,7 +85,8 @@ body {
     padding-top: 5px;
 }
 
-.archive th, .archive td {
+.archive th,
+.archive td {
     padding: 10px;
     text-align: left;
 }
@@ -138,5 +139,17 @@ body {
 
     .md\:sub-text {
         font-size: 70px;
+    }
+
+    .md\:bg-prim {
+        background-color: #112240;
+    }
+
+    .md:\shadow-p {
+        box-shadow: rgb(2 12 27 / 70%) 0px 5px 20px 3px;
+    }
+
+    .md\:sm-text {
+        font-size: 13px;
     }
 }

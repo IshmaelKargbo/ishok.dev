@@ -12,7 +12,9 @@ const Tab = ({ name, id, active = '', onClick = (e) => { } }) => {
 const Duty = ({ duty }) => {
     return (
         <div className="flex space-x-5 mb-5">
-            <FiPlay className="text-sec text-base jt-p" />
+            <div className="w-2">
+                <FiPlay className="text-sec text-lg md:text-base jt-p" />
+            </div>
             <p>{duty}</p>
         </div>
     )
@@ -20,7 +22,7 @@ const Duty = ({ duty }) => {
 
 const Jobs: NextPage = () => {
 
-    const jobs:any = [
+    const jobs: any = [
         {
             id: "1",
             name: "Arsabi SL",
@@ -75,17 +77,17 @@ const Jobs: NextPage = () => {
     return (
         <Layout>
             <div className="flex justify-center">
-                <div className="w-3/4">
+                <div className="md:w-3/4 w-full">
                     <Title title='Where I’ve Worked' count='02' />
-                    <div className="flex">
-                        <div>
+                    <div className="flex flex-wrap">
+                        <div className="md:w-auto w-full mb-10">
                             <ul className="border-l-2 border-alt">
                                 {
                                     jobs.map((job) => (<li key={job.id}><Tab onClick={changeTab} name={job.name} id={job.id} active={active ? active.id : ''} /></li>))
                                 }
                             </ul>
                         </div>
-                        <div className="pl-10">
+                        <div className="md:pl-10 md:w-auto w-full">
                             <h5 className="text-xl text-head mb-1">
                                 <span>{active.position}</span>
                                 <span className="text-sec mx-2">@</span>
