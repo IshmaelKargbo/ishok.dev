@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start -p $PORT"
   },
+  "cacheDirectories": [".next/cache"],
   "resolutions": {
     "styled-components": "^5"
   },
