@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --navy-shadow: rgba(2,12,27,0.7);
+    --fz-xl: 20px;
+    --lightest-slate: #ccd6f6;
+    --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    --fz-md: 16px;
+    --fz-xxs: 12px;
+    --fz-lg: 18px;
+    --yellow: #ffc62b;
+}
+
+body {
+    background: #0b1930;
+    color: #818ea8;
+    font-family: Calibre, sans-serif;
+    font-size: 18px;
+}
+
+.font-head {
+    font-family: var(--font-mono);
+}
+
+.bg-prim {
+    background-color: #112240;
+}
+
+.shadow-p {
+    box-shadow: rgb(2 12 27 / 70%) 0px 5px 20px 3px;
+}
+
+.bg-sec {
+    background: #ffc62b;
+}
+
+.border-sec {
+    border-color: #ffc62b;
+}
+
+.hover\:border-sec:hover {
+    border-color: #e1ae22;
+}
+
+.border-alt {
+    border-color: #818ea8;
+}
+
+.text-sec,
+.hover\:text-sec:hover {
+    color: #ffc62b;
+}
+
+.title-text {
+    font-size: 88px;
+}
+
+.sub-text {
+    font-size: 70px;
+}
+
+.text-v {
+    writing-mode: vertical-rl;
+}
+
+.text-space {
+    letter-spacing: 1px;
+}
+
+.sm-text {
+    font-size: 13px;
+}
+
+.xs-text {
+    font-size: 11px;
+}
+
+.text-head {
+    color: #ccd6f6;
+}
+
+.no-select {
+    user-select: none;
+}
+
+.lb-m {
+    margin-left: -1.8px;
+}
+
+.jt-p {
+    padding-top: 5px;
+}
+
+.archive th, .archive td {
+    padding: 10px;
+    text-align: left;
+}
+
+.archive tbody tr:hover {
+    background: #112240;
+}
+
+.archive td.year {
+    padding-right: 20px;
+    font-family: var(--font-mono);
+}
+
+.overline {
+    color: var(--yellow);
+    font-family: var(--font-mono);
+    font-size: var(--fz-md);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.archive td.company {
+    font-size: var(--fz-lg);
+    white-space: nowrap;
+}
+
+.archive td.title {
+    padding-top: 15px;
+    padding-right: 20px;
+    color: var(--lightest-slate);
+    font-size: var(--fz-xl);
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.archive td.tech {
+    font-size: var(--fz-xxs);
+    font-family: var(--font-mono);
+    line-height: 1.5;
+}
+
+.archive td.links {
+    min-width: 100px;
+}
