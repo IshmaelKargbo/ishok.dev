@@ -20,7 +20,7 @@ const Duty = ({ duty }) => {
 
 const Jobs: NextPage = () => {
 
-    const jobs = [
+    const jobs:any = [
         {
             id: "1",
             name: "Arsabi SL",
