@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import { NextSeo } from "next-seo";
 import React from "react";
 import { FiGithub } from "react-icons/fi";
 import { HiOutlineExternalLink } from "react-icons/hi";
@@ -6,6 +7,17 @@ import { Layout } from "../components/Layout";
 
 const Archive: NextPage = () => {
     return (
+        <>
+            <NextSeo
+                title="Ishmael Kargbo"
+                description="I'm a Full-stack developer from Sierra Leone"
+                canonical="https://www.ishok.dev/"
+                twitter={{
+                    handle: '@ishodev',
+                    site: '@Ishok',
+                    cardType: 'me.jpeg',
+                }}
+            />
         <Layout>
             <div className="mb-10">
                 <h1 className="text-head title-text">Archive</h1>
@@ -99,6 +111,7 @@ const Archive: NextPage = () => {
                 </table>
             </div>
         </Layout>
+        </>
     );
 }
 

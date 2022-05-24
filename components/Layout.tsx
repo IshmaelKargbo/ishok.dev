@@ -25,7 +25,7 @@ export const Layout = ({ children }) => {
 
     return (
         <div className="flex flex-col h-screen">
-            <header className={`py-6 ${sticky} bg-main`}>
+            <header className={`py-6 ${sticky} bg-main navbar`}>
                 <Nav />
             </header>
             <main className="flex-1 flex items-center md:px-14">

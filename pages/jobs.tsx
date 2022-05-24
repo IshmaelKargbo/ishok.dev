@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import { NextSeo } from "next-seo";
 import React, { useState } from "react"
 import { FiPlay } from "react-icons/fi";
 import { Layout, Title } from "../components/Layout";
@@ -75,37 +76,49 @@ const Jobs: NextPage = () => {
     }
 
     return (
-        <Layout>
-            <div className="flex justify-center">
-                <div className="md:w-3/4 w-full">
-                    <Title title='Where I’ve Worked' count='02' />
-                    <div className="flex flex-wrap">
-                        <div className="md:w-auto w-full mb-10">
-                            <ul className="border-l-2 border-alt">
-                                {
-                                    jobs.map((job) => (<li key={job.id}><Tab onClick={changeTab} name={job.name} id={job.id} active={active ? active.id : ''} /></li>))
-                                }
-                            </ul>
-                        </div>
-                        <div className="md:pl-10 md:w-auto w-full">
-                            <h5 className="text-xl text-head mb-1">
-                                <span>{active.position}</span>
-                                <span className="text-sec mx-2">@</span>
-                                <a href={active.link} className="hover:text-sec hover:underline" target='_blank'>{active.name}</a>
-                            </h5>
-                            <p className="sm-text font-head mb-10">{active.start} - {active.end}</p>
-                            <ul>
-                                <li>
+        <>
+            <NextSeo
+                title="Ishmael Kargbo"
+                description="I'm a Full-stack developer from Sierra Leone"
+                canonical="https://www.ishok.dev/"
+                twitter={{
+                    handle: '@ishodev',
+                    site: '@Ishok',
+                    cardType: 'me.jpeg',
+                }}
+            />
+            <Layout>
+                <div className="flex justify-center">
+                    <div className="md:w-3/4 w-full">
+                        <Title title='Where I’ve Worked' count='02' />
+                        <div className="flex flex-wrap">
+                            <div className="md:w-auto w-full mb-10">
+                                <ul className="border-l-2 border-alt">
                                     {
-                                        active.duties.map((duty, index) => (<Duty key={index} duty={duty} />))
+                                        jobs.map((job) => (<li key={job.id}><Tab onClick={changeTab} name={job.name} id={job.id} active={active ? active.id : ''} /></li>))
                                     }
-                                </li>
-                            </ul>
+                                </ul>
+                            </div>
+                            <div className="md:pl-10 md:w-auto w-full">
+                                <h5 className="text-xl text-head mb-1">
+                                    <span>{active.position}</span>
+                                    <span className="text-sec mx-2">@</span>
+                                    <a href={active.link} className="hover:text-sec hover:underline" target='_blank'>{active.name}</a>
+                                </h5>
+                                <p className="sm-text font-head mb-10">{active.start} - {active.end}</p>
+                                <ul>
+                                    <li>
+                                        {
+                                            active.duties.map((duty, index) => (<Duty key={index} duty={duty} />))
+                                        }
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </Layout>
+            </Layout>
+        </>
     );
 }
 

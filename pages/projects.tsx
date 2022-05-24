@@ -5,6 +5,7 @@ import { BsFolder } from "react-icons/bs";
 import { Layout, Title } from "../components/Layout";
 import { NextPage } from "next";
 import Link from "next/link";
+import { NextSeo } from "next-seo";
 
 const Project = ({ index }) => {
     const direction = index % 2 === 1 ? 'Right' : 'Left';
@@ -38,23 +39,35 @@ const Project = ({ index }) => {
 
 const Noteworthy = () => {
     return (
-        <div className="bg-prim shadow-p p-5 rounded-md cursor-pointer">
-            <div className="flex justify-between items-center mb-7">
-                <BsFolder className="md:text-4xl text-3xl text-sec" />
-                <div className="flex space-x-5 text-xl">
-                    <a href="/" className="text-head hover:text-sec text-lg"><FiGithub /></a>
-                    <a href="/" className="text-head hover:text-sec text-lg"><HiOutlineExternalLink /></a>
+        <>
+            <NextSeo
+                title="Ishmael Kargbo"
+                description="I'm a Full-stack developer from Sierra Leone"
+                canonical="https://www.ishok.dev/"
+                twitter={{
+                    handle: '@ishodev',
+                    site: '@Ishok',
+                    cardType: 'me.jpeg',
+                }}
+            />
+            <div className="bg-prim shadow-p p-5 rounded-md cursor-pointer">
+                <div className="flex justify-between items-center mb-7">
+                    <BsFolder className="md:text-4xl text-3xl text-sec" />
+                    <div className="flex space-x-5 text-xl">
+                        <a href="/" className="text-head hover:text-sec text-lg"><FiGithub /></a>
+                        <a href="/" className="text-head hover:text-sec text-lg"><HiOutlineExternalLink /></a>
+                    </div>
                 </div>
+                <h1 className="text-head md:text-2xl text-lg font-semibold mb-3">Integrating algolia search with wordpress multisite</h1>
+                <p className="md:mb-8 mb-5 text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit perspiciatis eius veniam amet tempora enim</p>
+                <ul className='flex -mx-2 flex-wrap md:-mb-5'>
+                    <li className="md:sm-text xs-text mx-2 font-head mb-2">React</li>
+                    <li className="md:sm-text xs-text mx-2 font-head mb-2">Express</li>
+                    <li className="md:sm-text xs-text mx-2 font-head mb-2">Spotify API</li>
+                    <li className="md:sm-text xs-text mx-2 font-head mb-2">Styled Components</li>
+                </ul>
             </div>
-            <h1 className="text-head md:text-2xl text-lg font-semibold mb-3">Integrating algolia search with wordpress multisite</h1>
-            <p className="md:mb-8 mb-5 text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit perspiciatis eius veniam amet tempora enim</p>
-            <ul className='flex -mx-2 flex-wrap md:-mb-5'>
-                <li className="md:sm-text xs-text mx-2 font-head mb-2">React</li>
-                <li className="md:sm-text xs-text mx-2 font-head mb-2">Express</li>
-                <li className="md:sm-text xs-text mx-2 font-head mb-2">Spotify API</li>
-                <li className="md:sm-text xs-text mx-2 font-head mb-2">Styled Components</li>
-            </ul>
-        </div>
+        </>
     )
 }
 
