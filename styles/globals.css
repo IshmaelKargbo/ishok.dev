@@ -20,6 +20,10 @@ body {
     font-size: 16px;
 }
 
+.bg-main {
+    background: #0b1930;
+}
+
 .font-head {
     font-family: var(--font-mono);
 }
