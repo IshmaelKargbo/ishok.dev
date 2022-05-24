@@ -5,7 +5,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Layout>
-        <div className='-mt-16'>
+        <div className='-mt-16 md:mt-0'>
           <h4 className="font-head md:text-sm text-sec mb-5 md:mb-12">Hi, my name is</h4>
           <h1 className="text-gray-200 md:title-text text-4xl font-semibold md:-mx-1 mb-3 md:my-8">Ishmael Kargbo</h1>
           <h3 className="md:sub-text font-semibold text-2xl mb-5 md:-mx-1">Let’s design that future together</h3>

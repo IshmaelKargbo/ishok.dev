@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Connect, Email } from "./BottomNav";
+import { Footer } from "./Footer";
 import { Nav } from "./Nav";
 
 export const Layout = ({ children }) => {
@@ -9,8 +10,6 @@ export const Layout = ({ children }) => {
     const stickNavbar = () => {
         if (window !== undefined) {
             let windowHeight = window.scrollY;
-            console.log(window.innerWidth);
-
             if (window.innerWidth <= 767)
                 windowHeight > 150 ? setSticky('fixed top-0 left-0 z-50 w-full') : setSticky('relative');
             else
@@ -36,6 +35,7 @@ export const Layout = ({ children }) => {
                 </div>
                 <Email />
             </main>
+            <Footer />
         </div>
     );
 }

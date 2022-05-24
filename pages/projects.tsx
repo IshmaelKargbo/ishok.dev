@@ -76,7 +76,7 @@ const Projects: NextPage = () => {
                         <a className="text-sec sm-text font-head hover:underline">view the archive</a>
                     </Link>
                 </div>
-                <ul className="flex md:my-20 my-10 -mx-5 flex-wrap">
+                <ul className="flex md:my-20 mt-10 mb-6 -mx-5 flex-wrap">
                     {
                         [1, 2, 3, 4, 5, 6].map((project, key) => (
                             <li key={key} className="md:w-1/3 w-full md:p-2 p-5">
