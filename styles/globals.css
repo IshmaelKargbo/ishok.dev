@@ -91,7 +91,7 @@ body {
 
 .archive th,
 .archive td {
-    padding: 10px;
+    padding: 5px;
     text-align: left;
 }
 
@@ -118,10 +118,10 @@ body {
 }
 
 .archive td.title {
-    padding-top: 15px;
-    padding-right: 20px;
+    padding-top: 10px;
+    padding-right: 15px;
     color: var(--lightest-slate);
-    font-size: var(--fz-xl);
+    font-size: 18px;
     font-weight: 600;
     line-height: 1.25;
 }
@@ -137,6 +137,11 @@ body {
 }
 
 @media (min-width: 768px) {
+
+    .archive th,
+    .archive td {
+        padding: 10px;
+    }
 
     body {
         font-size: 18px;
@@ -161,7 +166,12 @@ body {
     .md\:sm-text {
         font-size: 13px;
     }
-    
+
+    .archive td.title {
+        padding-top: 15px;
+        padding-right: 20px;
+        font-size: var(--fz-xl);
+    }
 }
 
 .navbar {
