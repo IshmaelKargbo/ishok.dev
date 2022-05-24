@@ -100,14 +100,14 @@ body {
 }
 
 .archive td.year {
-    padding-right: 20px;
+    padding-right: 10px;
     font-family: var(--font-mono);
 }
 
 .overline {
     color: var(--yellow);
     font-family: var(--font-mono);
-    font-size: var(--fz-md);
+    font-size: 15px;
     font-weight: 400;
     text-decoration: none;
 }
@@ -141,6 +141,14 @@ body {
     .archive th,
     .archive td {
         padding: 10px;
+    }
+
+    .overline {
+        font-size: var(--fz-md);
+    }
+
+    .archive td.year {
+        padding-right: 20px;
     }
 
     body {
