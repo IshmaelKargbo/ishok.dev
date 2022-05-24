@@ -81,10 +81,6 @@ body {
     user-select: none;
 }
 
-.lb-m {
-    margin-left: -1.8px;
-}
-
 .jt-p {
     padding-top: 5px;
 }
@@ -136,6 +132,11 @@ body {
     min-width: 100px;
 }
 
+
+.bb-m {
+    margin-bottom: -1.8px;
+}
+
 @media (min-width: 768px) {
 
     .archive th,
@@ -179,6 +180,10 @@ body {
         padding-top: 15px;
         padding-right: 20px;
         font-size: var(--fz-xl);
+    }
+
+    .lb-m {
+        margin-left: -1.8px;
     }
 }
 

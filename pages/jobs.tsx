@@ -6,7 +6,7 @@ import { Layout, Title } from "../components/Layout";
 
 const Tab = ({ name, id, active = '', onClick = (e) => { } }) => {
     return (
-        <p onClick={onClick} id={id} className={`sm-text font-head py-3  whitespace-nowrap hover:bg-orange-200 cursor-pointer hover:bg-opacity-10 hover:border-sec px-5 border-l-2 lb-m ${id === active ? 'bg-orange-200 bg-opacity-10 border-sec' : 'border-alt'}`}>{name}</p>
+        <p onClick={onClick} id={id} className={`sm-text font-head py-3  whitespace-nowrap hover:bg-orange-200 cursor-pointer hover:bg-opacity-10 hover:border-sec px-5 md:border-l-2 border-b-2 md:border-b-0 lb-m ${id === active ? 'bg-orange-200 bg-opacity-10 border-sec' : 'border-alt'}`}>{name}</p>
     )
 }
 
@@ -52,7 +52,7 @@ const Jobs: NextPage = () => {
         },
         {
             id: "3",
-            name: "Kolie",
+            name: "Fix Solution",
             link: 'https://www.google.com/',
             position: "Full Stack Developer",
             start: "January 2020",
@@ -62,7 +62,59 @@ const Jobs: NextPage = () => {
                 "Manually tested sites in various browsers and mobile devices to ensure cross-browser compatibility and responsiveness",
                 "Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Department of Defense, and more"
             ]
-        }
+        },
+        {
+            id: "4",
+            name: "Fix Solution",
+            link: 'https://www.google.com/',
+            position: "Full Stack Developer",
+            start: "January 2020",
+            end: "Present",
+            duties: [
+                "Developed and maintained code for in-house and client websites primarily using HTML, CSS, Sass, JavaScript, and jQuery",
+                "Manually tested sites in various browsers and mobile devices to ensure cross-browser compatibility and responsiveness",
+                "Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Department of Defense, and more"
+            ]
+        },
+        {
+            id: "5",
+            name: "Fix Solution",
+            link: 'https://www.google.com/',
+            position: "Full Stack Developer",
+            start: "January 2020",
+            end: "Present",
+            duties: [
+                "Developed and maintained code for in-house and client websites primarily using HTML, CSS, Sass, JavaScript, and jQuery",
+                "Manually tested sites in various browsers and mobile devices to ensure cross-browser compatibility and responsiveness",
+                "Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Department of Defense, and more"
+            ]
+        },
+        {
+            id: "6",
+            name: "Fix Solution",
+            link: 'https://www.google.com/',
+            position: "Full Stack Developer",
+            start: "January 2020",
+            end: "Present",
+            duties: [
+                "Developed and maintained code for in-house and client websites primarily using HTML, CSS, Sass, JavaScript, and jQuery",
+                "Manually tested sites in various browsers and mobile devices to ensure cross-browser compatibility and responsiveness",
+                "Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Department of Defense, and more"
+            ]
+        },
+        {
+            id: "7",
+            name: "Fix Solution",
+            link: 'https://www.google.com/',
+            position: "Full Stack Developer",
+            start: "January 2020",
+            end: "Present",
+            duties: [
+                "Developed and maintained code for in-house and client websites primarily using HTML, CSS, Sass, JavaScript, and jQuery",
+                "Manually tested sites in various browsers and mobile devices to ensure cross-browser compatibility and responsiveness",
+                "Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Department of Defense, and more"
+            ]
+        },
     ]
 
     const [active, setActive] = useState(jobs.length > 0 ? jobs[0] : null)
@@ -92,14 +144,14 @@ const Jobs: NextPage = () => {
                     <div className="md:w-3/4 w-full">
                         <Title title='Where I’ve Worked' count='02' />
                         <div className="flex flex-wrap">
-                            <div className="md:w-auto w-full mb-10">
-                                <ul className="border-l-2 border-alt">
+                            <div className="md:w-1/4 w-full mb-10">
+                                <ul className="md:border-l-2 border-alt flex md:block overflow-x-auto md:overflow-x-hidden  md:overflow-y-hidden">
                                     {
                                         jobs.map((job) => (<li key={job.id}><Tab onClick={changeTab} name={job.name} id={job.id} active={active ? active.id : ''} /></li>))
                                     }
                                 </ul>
                             </div>
-                            <div className="md:pl-10 md:w-auto w-full">
+                            <div className="md:pl-10 md:w-3/4 w-full">
                                 <h5 className="text-xl text-head mb-1">
                                     <span>{active.position}</span>
                                     <span className="text-sec mx-2">@</span>
