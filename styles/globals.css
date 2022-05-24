@@ -17,7 +17,7 @@ body {
     background: #0b1930;
     color: #818ea8;
     font-family: Calibre, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .font-head {
@@ -133,6 +133,11 @@ body {
 }
 
 @media (min-width: 768px) {
+
+    body {
+        font-size: 18px;
+    }
+
     .md\:title-text {
         font-size: 88px;
     }

@@ -1,11 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Connect, Email } from "./BottomNav";
 import { Nav } from "./Nav";
 
 export const Layout = ({ children }) => {
+    
+    const [sticky, setSticky] = useState('relative');
+
+    const stickNavbar = () => {
+            console.log(window);
+            
+        if (window !== undefined) {
+            
+            let windowHeight = window.scrollY;
+            windowHeight > 10 ? setSticky('fixed top-0 left-0 z-50 w-full border-b') : setSticky('relative');
+        }
+    };
+    
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            console.log("Yeah");
+        })
+        window.addEventListener('scroll', stickNavbar);
+        return () => window.removeEventListener('scroll', stickNavbar);
+    }, []);
+
+
     return (
         <div className="flex flex-col h-screen overflow-y-auto">
-            <header className="py-6">
+            <header className={`py-6 ${sticky}`}>
                 <Nav />
             </header>
             <main className="flex-1 flex items-center md:px-14">

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BiMenuAltRight } from "react-icons/bi";
 import { VscClose } from "react-icons/vsc";
 
@@ -33,6 +33,18 @@ const MobNavlink = ({ href = '', title = '', count = '' }) => {
 export const Nav = () => {
     const [menu, setMenu] = useState(false);
 
+    const router = useRouter();
+
+    useEffect(() => {
+        document.body.style.overflow = 'auto';
+        setMenu(false);
+    }, [router])
+
+    const toggleMenu = () => {
+        document.body.style.overflow = !menu ? 'hidden' : 'auto';
+        setMenu(!menu);
+    }
+
     return (
         <div>
             <nav className="md:px-14 px-6 flex items-center justify-between md:py-2 z-10">
@@ -60,7 +72,7 @@ export const Nav = () => {
                         </li>
                     </ul>
                 </div>
-                <button onClick={() => setMenu(true)} className="text-4xl text-sec block md:hidden">
+                <button onClick={toggleMenu} className="text-4xl text-sec block md:hidden">
                     <BiMenuAltRight />
                 </button>
             </nav>
