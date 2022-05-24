@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { BiMenuAltRight } from "react-icons/bi";
-import { VscClose } from "react-icons/vsc";
+import { IoCloseOutline } from "react-icons/io5";
 
 const Navlink = ({ href = '', title = '', count = '' }) => {
     const route = useRouter();
@@ -80,8 +80,8 @@ export const Nav = () => {
                 menu ?
                     <div className="h-screen fixed w-full justify-end bg-gray-500 z-50 top-0 bg-opacity-80 flex">
                         <nav className="bg-prim w-2/3 flex flex-col relative">
-                            <button onClick={() => setMenu(false)}  className="text-4xl absolute right-5 top-5  mt-1 text-sec">
-                                <VscClose />
+                            <button onClick={() => setMenu(false)} className="text-4xl absolute right-5 top-5  mt-1 text-sec">
+                                <IoCloseOutline />
                             </button>
                             <ul className="flex flex-col flex-1 space-y-12 items-center justify-center">
                                 <li>
