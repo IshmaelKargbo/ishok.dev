@@ -6,7 +6,7 @@ import { Layout, Title } from "../components/Layout";
 
 const Tab = ({ name, id, active = '', onClick = (e) => { } }) => {
     return (
-        <p onClick={onClick} id={id} className={`sm-text font-head py-3  whitespace-nowrap hover:bg-orange-200 cursor-pointer hover:bg-opacity-10 hover:border-sec px-5 md:border-l-2 border-b-2 md:border-b-0 lb-m ${id === active ? 'bg-orange-200 bg-opacity-10 border-sec' : 'border-alt'}`}>{name}</p>
+        <p onClick={onClick} id={id} className={`sm-text font-head py-3  whitespace-nowrap hover:bg-orange-200 cursor-pointer hover:bg-opacity-10 hover:border-sec px-5 md:border-l-2 border-b-2 md:border-b-0 md:lb-m ${id === active ? 'bg-orange-200 bg-opacity-10 border-sec' : 'border-alt'}`}>{name}</p>
     )
 }
 
