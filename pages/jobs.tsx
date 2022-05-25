@@ -6,7 +6,7 @@ import { Layout, Title } from "../components/Layout";
 
 const Tab = ({ name, id, active = '', onClick = (e) => { } }) => {
     return (
-        <p onClick={onClick} id={id} className={`sm-text font-head py-3  whitespace-nowrap hover:bg-orange-200 cursor-pointer hover:bg-opacity-10 hover:border-sec px-5 md:border-l-2 border-b-2 md:border-b-0 md:lb-m ${id === active ? 'bg-orange-200 bg-opacity-10 border-sec' : 'border-alt'}`}>{name}</p>
+        <p onClick={onClick} id={id} className={`sm-text font-head py-3  whitespace-nowrap hover:bg-orange-200 cursor-pointer hover:bg-opacity-10 hover:border-sec px-5 md:border-l-2 border-b-2 md:border-b-0 ${id === active ? 'bg-orange-200 bg-opacity-10 border-sec' : 'border-alt'}`}>{name}</p>
     )
 }
 
@@ -145,7 +145,7 @@ const Jobs: NextPage = () => {
                         <Title title='Where I’ve Worked' count='02' />
                         <div className="flex flex-wrap">
                             <div className="md:w-1/4 w-full mb-10">
-                                <ul className="md:border-l-2 border-alt flex md:block overflow-x-auto md:overflow-x-hidden  md:overflow-y-hidden">
+                                <ul className="flex md:block overflow-x-auto md:overflow-x-hidden  md:overflow-y-hidden">
                                     {
                                         jobs.map((job) => (<li key={job.id}><Tab onClick={changeTab} name={job.name} id={job.id} active={active ? active.id : ''} /></li>))
                                     }
