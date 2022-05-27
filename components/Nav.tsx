@@ -68,7 +68,11 @@ export const Nav = () => {
                             <Navlink title="Contact" count="04" href="/contact" />
                         </li>
                         <li>
-                            <button className="border-sec border text-sec py-2 font-head text-sm px-4 rounded-md hover:bg-orange-200 hover:bg-opacity-10"><span>Resume</span></button>
+                            <a href="../resume.pdf" target="_blank">
+                                <button className="border-sec border text-sec py-2 font-head text-sm px-4 rounded-md hover:bg-orange-200 hover:bg-opacity-10">
+                                    <span>Resume</span>
+                                </button>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -97,7 +101,11 @@ export const Nav = () => {
                                     <MobNavlink title="Contact" count="04" href="/contact" />
                                 </li>
                                 <li>
-                                    <button className="border-sec border text-sec py-2 font-head text-sm px-4 rounded-md hover:bg-orange-200 hover:bg-opacity-10"><span>Resume</span></button>
+                                    <a href="../resume.pdf" target="_blank">
+                                        <button className="border-sec border text-sec py-2 font-head text-sm px-4 rounded-md hover:bg-orange-200 hover:bg-opacity-10">
+                                            <span>Resume</span>
+                                        </button>
+                                    </a>
                                 </li>
                             </ul>
                         </nav>
