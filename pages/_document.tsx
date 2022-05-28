@@ -7,8 +7,8 @@ class MyDocument extends Document {
         return (
             <Html>
                 <Head>
-                    <link href="http://fonts.cdnfonts.com/css/calibre" rel="stylesheet" />
-                    <link href="http://fonts.cdnfonts.com/css/sf-mono" rel="stylesheet" />
+                    <link href="https://fonts.cdnfonts.com/css/calibre" rel="stylesheet" />
+                    <link href="https://fonts.cdnfonts.com/css/sf-mono" rel="stylesheet" />
                 </Head>
                 <body>
                     <Main />
