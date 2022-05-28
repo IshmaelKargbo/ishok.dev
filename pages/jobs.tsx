@@ -27,94 +27,28 @@ const Jobs: NextPage = () => {
         {
             id: "1",
             name: "Arsabi SL",
-            link: 'https://www.google.com/',
+            link: '#',
             position: "Full Stack Developer",
             start: "Apirl 2018",
             end: "December 2019",
             duties: [
-                "Developed and maintained code for in-house and client websites primarily using HTML, CSS, Sass, JavaScript, and jQuery",
-                "Manually tested sites in various browsers and mobile devices to ensure cross-browser compatibility and responsiveness",
-                "Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Department of Defense, and more"
+                "Developed and maintained code for a in-house mobile app",
+                "Manually tested app in various mobile devices to ensure cross-browse compatibility and responsiveness"
             ]
         },
         {
             id: "2",
             name: "Fix Solution",
-            link: 'https://www.google.com/',
+            link: '#',
             position: "Full Stack Developer",
             start: "January 2020",
             end: "Present",
             duties: [
-                "Developed and maintained code for in-house and client websites primarily using HTML, CSS, Sass, JavaScript, and jQuery",
+                "Developed and maintained code for in-house and client websites primarily using HTML, CSS, Vue, JavaScript",
                 "Manually tested sites in various browsers and mobile devices to ensure cross-browser compatibility and responsiveness",
-                "Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Department of Defense, and more"
+                "Clients included Govement Of Sierra Leone, Orange SL, GIZ, Rainbo, and more"
             ]
-        },
-        {
-            id: "3",
-            name: "Fix Solution",
-            link: 'https://www.google.com/',
-            position: "Full Stack Developer",
-            start: "January 2020",
-            end: "Present",
-            duties: [
-                "Developed and maintained code for in-house and client websites primarily using HTML, CSS, Sass, JavaScript, and jQuery",
-                "Manually tested sites in various browsers and mobile devices to ensure cross-browser compatibility and responsiveness",
-                "Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Department of Defense, and more"
-            ]
-        },
-        {
-            id: "4",
-            name: "Fix Solution",
-            link: 'https://www.google.com/',
-            position: "Full Stack Developer",
-            start: "January 2020",
-            end: "Present",
-            duties: [
-                "Developed and maintained code for in-house and client websites primarily using HTML, CSS, Sass, JavaScript, and jQuery",
-                "Manually tested sites in various browsers and mobile devices to ensure cross-browser compatibility and responsiveness",
-                "Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Department of Defense, and more"
-            ]
-        },
-        {
-            id: "5",
-            name: "Fix Solution",
-            link: 'https://www.google.com/',
-            position: "Full Stack Developer",
-            start: "January 2020",
-            end: "Present",
-            duties: [
-                "Developed and maintained code for in-house and client websites primarily using HTML, CSS, Sass, JavaScript, and jQuery",
-                "Manually tested sites in various browsers and mobile devices to ensure cross-browser compatibility and responsiveness",
-                "Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Department of Defense, and more"
-            ]
-        },
-        {
-            id: "6",
-            name: "Fix Solution",
-            link: 'https://www.google.com/',
-            position: "Full Stack Developer",
-            start: "January 2020",
-            end: "Present",
-            duties: [
-                "Developed and maintained code for in-house and client websites primarily using HTML, CSS, Sass, JavaScript, and jQuery",
-                "Manually tested sites in various browsers and mobile devices to ensure cross-browser compatibility and responsiveness",
-                "Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Department of Defense, and more"
-            ]
-        },
-        {
-            id: "7",
-            name: "Fix Solution",
-            link: 'https://www.google.com/',
-            position: "Full Stack Developer",
-            start: "January 2020",
-            end: "Present",
-            duties: [
-                "Developed and maintained code for in-house and client websites primarily using HTML, CSS, Sass, JavaScript, and jQuery",
-                "Manually tested sites in various browsers and mobile devices to ensure cross-browser compatibility and responsiveness",
-                "Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Department of Defense, and more"
-            ]
-        },
+        }
     ]
 
     const [active, setActive] = useState(jobs.length > 0 ? jobs[0] : null)

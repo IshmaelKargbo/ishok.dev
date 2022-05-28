@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { FiGithub } from "react-icons/fi";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { BsFolder } from "react-icons/bs";
@@ -6,6 +6,7 @@ import { Layout, Title } from "../components/Layout";
 import { NextPage } from "next";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
+import { UnderConstruction } from "../components/UnderConstruction";
 
 const Project = ({ index }) => {
     const direction = index % 2 === 1 ? 'Right' : 'Left';
@@ -72,35 +73,50 @@ const Noteworthy = () => {
 }
 
 const Projects: NextPage = () => {
+    const [productions, setProductions] = useState([])
+    const [others, setOthers] = useState([]);
+
     return (
         <Layout>
             <div className="md:my-20 my-10">
                 <Title title='Some Things I’ve Built' count='02' />
-                <div className="md:mt-16 mt-10 md:mb-48">
-                    {
-                        [1, 2, 3].map((project, key) => (
-                            <Project index={key} key={key} />
-                        ))
-                    }
-                </div>
+                {
+                    productions.length > 0 ?
+                        <div className="md:mt-16 mt-10 md:mb-48">
+                            {
+                                productions.map((project, key) => (
+                                    <Project index={key} key={key} />
+                                ))
+                            }
+                        </div>
+                        :
+                        <UnderConstruction />
+                }
                 <h1 className="text-head text-center md:text-3xl text-xl font-semibold mb-2">Other Noteworthy Projects</h1>
-                <div className="flex justify-center">
-                    <Link href='/archive'>
-                        <a className="text-sec sm-text font-head hover:underline">view the archive</a>
-                    </Link>
-                </div>
-                <ul className="flex md:my-20 mt-10 mb-6 -mx-5 flex-wrap">
-                    {
-                        [1, 2, 3, 4, 5, 6].map((project, key) => (
-                            <li key={key} className="md:w-1/3 w-full md:p-2 p-5">
-                                <Noteworthy />
-                            </li>
-                        ))
-                    }
-                </ul>
-                <div className="flex justify-center">
-                    <button className="border-sec border text-sec md:py-3 md:px-10 px-6 py-3 text-sm md:text-lg rounded-md hover:bg-orange-200 hover:bg-opacity-10"><span>Show More</span></button>
-                </div>
+                {
+                    productions.length > 0 || others.length > 0 ?
+                        <div>
+                            <div className="flex justify-center">
+                                <Link href='/archive'>
+                                    <a className="text-sec sm-text font-head hover:underline">view the archive</a>
+                                </Link>
+                            </div>
+                            <ul className="flex md:my-20 mt-10 mb-6 -mx-5 flex-wrap">
+                                {
+                                    [1, 2, 3, 4, 5, 6].map((project, key) => (
+                                        <li key={key} className="md:w-1/3 w-full md:p-2 p-5">
+                                            <Noteworthy />
+                                        </li>
+                                    ))
+                                }
+                            </ul>
+                            <div className="flex justify-center">
+                                <button className="border-sec border text-sec md:py-3 md:px-10 px-6 py-3 text-sm md:text-lg rounded-md hover:bg-orange-200 hover:bg-opacity-10"><span>Show More</span></button>
+                            </div>
+                        </div>
+                        : <UnderConstruction />
+                }
+
             </div>
         </Layout>
     );
